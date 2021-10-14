@@ -30,7 +30,7 @@ def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
 
 
-def get_letter_guess():
+def get_user_guess():
     retry_input_guess = True
     guess_options = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     while retry_input_guess:
@@ -56,12 +56,11 @@ def update_masked_word(current_word, masked_word, current_letter):
 def check_if_user_won(current_word, masked_word):
     return masked_word.lower() == current_word.lower()
 
-
 def play_word(current_word, masked_word, lives):
     user_won_game = False
     while (lives > 0) and (user_won_game is False):
         print('Challenge word: %s  Lives: %i' % (masked_word, lives))
-        current_letter = get_letter_guess()
+        current_letter = get_user_guess()
         guesses.append(current_letter.upper())
         if (validate_letter_in_word(current_letter, current_word)):
             masked_word = update_masked_word(current_word, masked_word, current_letter)
@@ -135,4 +134,3 @@ if __name__ == '__main__':
         guesses = []
         play_game = playAgain()
     print('Thank you for playing')
-    
