@@ -1,31 +1,97 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Guess The Word
 
-Welcome tcostain98,
+Guess the word is a python terminal game that runs in the Code Institute Terminal.
+Users have to guess the letters of the word to win the game.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+# How To Play
 
-## Reminders
+Guess The Word is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+You have 10 lives (attempts) to guess the word.
 
-## Creating the Heroku app
+The player simply enters a letter of the alphabet on the keyboard.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+If the player guesses correctly the letter will be displayed and all lives will be intact.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+If the player guessses incorrectly then a life will be deducted.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+After guessing the letter the player will be prompted keep guessing until the word is displayed or until the number of lives reaches 0.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Features
 
-Connect your GitHub repository and deploy as normal.
+-Existing Features
 
-## Constraints
+    -Each hidden letter is displayed as an underscore '_'.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+    -The number of lives are displayed after each guess is attempted.
 
------
-Happy coding!
+    -There are 3 levels of difficulty: Easy, Medium, Hard.
+
+    -Accepts user input.
+
+    -Play again option.
+
+    -Input validation and error correcting
+        -You must enter characters in the English alphabet.
+
+        -You cannot enter the same character more than once.
+
+        -You can enter upper case or lower case letters.
+
+-Future Features
+
+    -Add more levels of difficulty.
+
+    -Add more words to each difficulty level.
+
+### Data Model
+
+I used a json file to store the data for each difficulty level.
+
+I created a variable and assigned it to the value of the json file.
+
+#### Testing
+
+I have manually tested this project by doing the following:
+
+    -Passed the code through PEP8 linter and confirmed there are no problems
+    
+    -Given invalid inputs: symbols and numbers when alpahbetic characters are expected, same input more than once.
+
+    -Tested in my local terminal by friends and family.
+
+Bugs
+
+
+    -No bugs shown.
+
+-Validator Testing
+
+    -PEP8
+        
+        -No errors were returned from PEP8online.com.
+
+
+##### Deployment
+
+This project was deployed using Git.
+
+    -Steps for deployment:
+
+        -Fork or clone this repository.
+
+        -Set the building blocks to python and nodejs in that order.
+
+        -Click on deploy.
+        
+
+###### Credits
+
+    -Code Institute for deployment terminal.
+
+    -My Mentor Antonio Rodriguez for continuous and helpful feedback.
+
+    -Tutor support at Code Institute for their support.
+
+
+
