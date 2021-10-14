@@ -7,17 +7,20 @@ done = False
 masked_word = ''
 current_word = ''
 
+
 def game_result(user_won, word):
     if user_won:
         print(f"Excellent!, you have won!  The word was {word}!")
     else:
         print(f"So Close!  Better luck next time.  The word was {word}")
 
+
 def mask_current_word(word):
     masked = []
     for letter in word:
         masked.append('_')
     return ''.join(masked)
+
 
 def mask_current_word(word):
     masked = []
@@ -44,6 +47,7 @@ def get_letter_guess():
             print('You must enter an alphabetic character.')
     return letter
 
+
 def update_masked_word(current_word, masked_word, current_letter):
     masked_word_array = list(masked_word)
     index = 0
@@ -52,6 +56,7 @@ def update_masked_word(current_word, masked_word, current_letter):
             masked_word_array[index] = letter
         index += 1
     return ''.join(masked_word_array)
+
 
 def check_if_user_won(current_word, masked_word):
     return masked_word.lower() == current_word.lower()
@@ -65,15 +70,15 @@ def play_word(current_word, masked_word, lives):
         guesses.append(current_letter.upper())
         if (validate_letter_in_word(current_letter, current_word)):
             masked_word = update_masked_word(current_word, masked_word, current_letter)
-            user_won_game = check_if_user_won(current_word, masked_word)
+        user_won_game = check_if_user_won(current_word, masked_word)
         else:
             lives -= 1
-    game_result(user_won_game, current_word)    
+        game_result(user_won_game, current_word)
 
 
 def read_words_from_json_file():
     try:
-        file = open('./words.json','r')
+        file = open('./words.json', 'r')
         with file:
             return json.load(file)
         file.close()
@@ -134,5 +139,4 @@ if __name__ == '__main__':
         lives = 7
         guesses = []
         play_game = playAgain()
-    print('Thank you for playing')
-    
+print('Thank you for playing')
