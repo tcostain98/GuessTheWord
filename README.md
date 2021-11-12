@@ -6,7 +6,7 @@ Users have to guess the letters of the word to win the game.
 
 # How To Play
 
-Hangman is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
+Guess the word is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
 
 You have 10 lives (attempts) to guess the word.
 
@@ -74,11 +74,17 @@ Bugs
 
 ##### Deployment
 
-This project was deployed using GitPod:
+This project was deployed using Code Insitute's mock terminal Heroku.
 
     -Steps for deployment:
 
         -Fork or clone this repository.
+
+        -Create a new Heroku app.
+
+        -Set the building blocks to python and nodejs in that order.
+
+        -Link the Heroku app to the repository.
 
         -Click on deploy.
         
