@@ -33,12 +33,21 @@ def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
 
 
+<<<<<<< HEAD
 ddef get_letter_guess():
     retry_input_guess = True
     guess_options = [
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
         'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
         'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+=======
+def get_user_guess():
+    retry_input_guess = True
+    guess_options = [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+        'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
+        'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+>>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
     while retry_input_guess:
         letter = input(f"Input your guess:/n ")
         if letter.upper() in guess_options:
@@ -69,15 +78,22 @@ def play_word(current_word, masked_word, lives):
     user_won_game = False
     while (lives > 0) and (user_won_game is False):
         print('Challenge word: %s  Lives: %i' % (masked_word, lives))
-        current_letter = get_letter_guess()
+        current_letter = get_user_guess()
         guesses.append(current_letter.upper())
         if (validate_letter_in_word(current_letter, current_word)):
             masked_word = update_masked_word(
                 current_word, masked_word, current_letter)
+<<<<<<< HEAD
         user_won_game = check_if_user_won(current_word, masked_word)
         else:
             lives -= 1
         game_result(user_won_game, current_word)
+=======
+            user_won_game = check_if_user_won(current_word, masked_word)
+        else:
+            lives -= 1
+    game_result(user_won_game, current_word)
+>>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
 
 
 def read_words_from_json_file():
@@ -143,4 +159,8 @@ if __name__ == '__main__':
         lives = 7
         guesses = []
         play_game = playAgain()
+<<<<<<< HEAD
 print('Thank you for playing')
+=======
+    print('Thank you for playing')
+>>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
