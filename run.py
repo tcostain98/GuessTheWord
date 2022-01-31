@@ -31,7 +31,7 @@ def mask_current_word(word):
 
 def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
-
+sh 
 
 def get_user_guess():
     retry_input_guess = True
