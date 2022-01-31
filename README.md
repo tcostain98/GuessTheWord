@@ -74,15 +74,20 @@ Bugs
 
 ##### Deployment
 
-This project was deployed using Git.
+Deployment
+This project was deployed using Code Insitute's mock terminal Heroku.
 
-    -Steps for deployment:
+-Steps for deployment:
 
-        -Fork or clone this repository.
+    -Fork or clone this repository.
 
-        -Set the building blocks to python and nodejs in that order.
+    -Create a new Heroku app.
 
-        -Click on deploy.
+    -Set the building blocks to python and nodejs in that order.
+
+    -Link the Heroku app to the repository.
+
+    -Click on deploy.
         
 
 ###### Credits
