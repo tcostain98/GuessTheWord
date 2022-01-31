@@ -60,8 +60,6 @@ If the player guessses incorrectly then a life will be deducted.
 After guessing the letter the player will be prompted keep guessing until the word is displayed or until the number of lives reaches 0.
 
 ## Features
-
->>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
 -Existing Features
 
     -Each hidden letter is displayed as an underscore '_'.
