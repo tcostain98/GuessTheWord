@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Guess The Word
 
 Guess the word is a python terminal game that runs in the Code Institute Terminal.
@@ -20,12 +20,30 @@ After guessing the letter the player will be prompted keep guessing until the wo
 
 ## Features
 
-=======
-GuessTheWord
+Existing Features
 
-GuessTheWord is a python terminal game that runs in Gitpod 
+    -Each hidden letter is displayed as an underscore '_'.
 
-Users have to guess the letters of the word to win the game.
+    -The number of lives are displayed after each guess is attempted.
+
+    -There are 3 levels of difficulty: Easy, Medium, Hard.
+
+    -Accepts user input.
+
+    -Play again option.
+
+    -Input validation and error correcting
+        -You must enter characters in the English alphabet.
+
+        -You cannot enter the same character more than once.
+
+        -You can enter upper case or lower case letters.
+
+-Future Features
+
+    -Add more levels of difficulty.
+
+    -Add more words to each difficulty level.
 
 # How To Play
 
@@ -85,14 +103,7 @@ I have manually tested this project by doing the following:
 
     -Tested in my local terminal by friends and family.
 
-Bugs
-
-<<<<<<< HEAD
-
-    -No bugs shown.
-=======
-    -No bugs.
->>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
+#### Bugs
 
 -Validator Testing
 
@@ -103,7 +114,7 @@ Bugs
 
 ##### Deployment
 
-<<<<<<< HEAD
+
 Deployment
 This project was deployed using Code Insitute's mock terminal Heroku.
 
@@ -118,21 +129,7 @@ This project was deployed using Code Insitute's mock terminal Heroku.
     -Link the Heroku app to the repository.
 
     -Click on deploy.
-=======
-This project was deployed using Code Insitute's mock terminal Heroku.
 
-    -Steps for deployment:
-
-        -Fork or clone this repository.
-
-        -Create a new Heroku app.
-
-        -Set the building blocks to python and nodejs in that order.
-
-        -Link the Heroku app to the repository.
-
-        -Click on deploy.
->>>>>>> 8d26d99cc506d0558090b3312035a7c90af12413
         
 
 ###### Credits
