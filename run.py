@@ -79,12 +79,12 @@ def play_word(current_word, masked_word, lives):
             masked_word = update_masked_word(
                 current_word, masked_word, current_letter)
         user_won_game = check_if_user_won(current_word, masked_word)
-            else:
+        aelse:
                 lives -= 1
         game_result(user_won_game, current_word)
 
 
-#  pulls info from json file to see if word is correct or not 
+# pulls info from json file to see if word is correct or not
 
 
 def read_words_from_json_file():
@@ -101,7 +101,7 @@ def read_words_from_json_file():
         raise
 
 
-# allows the user to select what level they would like to play 
+# allows the user to select what level they would like to play
 
 
 def select_game_level():
@@ -118,7 +118,6 @@ def select_game_level():
 
 
 # selects what work is taken from the json file
-
 
 
 def get_random_word(level, words_array):
@@ -162,4 +161,3 @@ if __name__ == '__main__':
         guesses = []
         play_game = playAgain()
     print('Thank you for playing')
-
