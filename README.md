@@ -1,4 +1,3 @@
-
 Guess The Word
 
 Guess the word is a python terminal game that runs in the Code Institute Terminal.
