@@ -79,8 +79,8 @@ def play_word(current_word, masked_word, lives):
             masked_word = update_masked_word(
                 current_word, masked_word, current_letter)
         user_won_game = check_if_user_won(current_word, masked_word)
-        aelse:
-                lives -= 1
+        else:
+            lives -= 1
         game_result(user_won_game, current_word)
 
 
