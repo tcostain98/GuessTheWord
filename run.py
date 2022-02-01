@@ -25,6 +25,7 @@ def mask_current_word(word):
 def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
 
+
 def get_user_guess():
     retry_input_guess = True
     guess_options = [
@@ -39,7 +40,7 @@ def get_user_guess():
             else:
                 retry_input_guess = False
         else:
-            print('You must enter an alphabetic character.')
+            print('You must enter one alphabetic character.')
     return letter
 
 
@@ -90,7 +91,7 @@ def select_game_level():
     retry_get_level = True
     level_options = ['1', '2', '3']
     while retry_get_level:
-        level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- hard ")
+        level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- Hard ")
         if level in level_options:
             retry_get_level = False
         else:
