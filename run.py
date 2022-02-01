@@ -1,6 +1,5 @@
 import json
 from random import randrange
-
 lives = 10
 guesses = []
 done = False
@@ -40,6 +39,7 @@ def get_user_guess():
             else:
                 retry_input_guess = False
         else:
+            print('You must enter an alphabetic character.')
             print('You must enter one alphabetic character.')
     return letter
 
@@ -68,8 +68,8 @@ def play_word(current_word, masked_word, lives):
             masked_word = update_masked_word(
                 current_word, masked_word, current_letter)
         user_won_game = check_if_user_won(current_word, masked_word)
-        else:
-            lives -= 1
+            else:
+                lives -= 1
         game_result(user_won_game, current_word)
 
 
@@ -91,6 +91,7 @@ def select_game_level():
     retry_get_level = True
     level_options = ['1', '2', '3']
     while retry_get_level:
+        level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- hard ")
         level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- Hard ")
         if level in level_options:
             retry_get_level = False
@@ -137,3 +138,4 @@ if __name__ == '__main__':
         guesses = []
         play_game = playAgain()
     print('Thank you for playing')
+
