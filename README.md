@@ -4,6 +4,7 @@ Guess The Word
 Guess the word is a python terminal game that runs in the Code Institute Terminal.
 Users have to guess the letters of the word to win the game.
 
+[View the live project here.](https://guess-theword.herokuapp.com/)
 # How To Play
 
 Guess The Word is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
@@ -45,45 +46,6 @@ Existing Features
 
     -Add more words to each difficulty level.
 
-# How To Play
-
-Guess the word is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
-
-You have 10 lives (attempts) to guess the word.
-
-The player simply enters a letter of the alphabet on the keyboard.
-
-If the player guesses correctly the letter will be displayed and all lives will be intact.
-
-If the player guessses incorrectly then a life will be deducted.
-
-After guessing the letter the player will be prompted keep guessing until the word is displayed or until the number of lives reaches 0.
-
-## Features
--Existing Features
-
-    -Each hidden letter is displayed as an underscore '_'.
-
-    -The number of lives are displayed after each guess is attempted.
-
-    -There are 3 levels of difficulty: Easy, Medium, Hard.
-
-    -Accepts user input.
-
-    -Play again option.
-
-    -Input validation and error correcting
-        -You must enter characters in the English alphabet.
-
-        -You cannot enter the same character more than once.
-
-        -You can enter upper case or lower case letters.
-
--Future Features
-
-    -Add more levels of difficulty.
-
-    -Add more words to each difficulty level.
 
 ### Data Model
 
