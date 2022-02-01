@@ -4,7 +4,7 @@ Guess The Word
 Guess the word is a python terminal game that runs in the Code Institute Terminal.
 Users have to guess the letters of the word to win the game.
 
-[View the live project here.]()
+[View the live project here.](https://guess-theword.herokuapp.com/)
 # How To Play
 
 Guess The Word is based on a the classic pen-and-paper game that many of us played in school when classes would finish early or just before the holidays were going to begin.
