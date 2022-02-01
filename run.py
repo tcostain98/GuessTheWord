@@ -24,6 +24,10 @@ def mask_current_word(word):
 def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
 
+# gives the user the ability to input a letter
+# gives error message if letter has already been attempted
+# if not a alphabetic character error merrage is displayed
+
 
 def get_user_guess():
     retry_input_guess = True
@@ -44,6 +48,9 @@ def get_user_guess():
     return letter
 
 
+# masks the letters allowing the user to submit there guesses
+
+
 def update_masked_word(current_word, masked_word, current_letter):
     masked_word_array = list(masked_word)
     index = 0
@@ -56,6 +63,10 @@ def update_masked_word(current_word, masked_word, current_letter):
 
 def check_if_user_won(current_word, masked_word):
     return masked_word.lower() == current_word.lower()
+
+
+# gives the user an indication if they have guessed successfully
+# if incorrrect guess lives will reduce and letter will show as incorrect
 
 
 def play_word(current_word, masked_word, lives):
@@ -73,6 +84,9 @@ def play_word(current_word, masked_word, lives):
         game_result(user_won_game, current_word)
 
 
+#  pulls info from json file to see if word is correct or not 
+
+
 def read_words_from_json_file():
     try:
         file = open('./words.json', 'r')
@@ -85,6 +99,9 @@ def read_words_from_json_file():
         return {}
     except:
         raise
+
+
+# allows the user to select what level they would like to play 
 
 
 def select_game_level():
@@ -100,6 +117,10 @@ def select_game_level():
     return int(level)
 
 
+# selects what work is taken from the json file
+
+
+
 def get_random_word(level, words_array):
     if level == 1:
         array_length = len(words_array['easy']) - 1
@@ -113,6 +134,9 @@ def get_random_word(level, words_array):
     random_index = randrange(array_length)
     random_word = words_array[level_key][random_index]
     return random_word
+
+
+# gives the option to play again
 
 
 def playAgain():
