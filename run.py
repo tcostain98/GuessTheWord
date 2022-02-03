@@ -1,6 +1,5 @@
 import json
 from random import randrange
-
 lives = 10
 guesses = []
 done = False
@@ -26,6 +25,11 @@ def validate_letter_in_word(letter, word):
     return letter.lower() in word.lower()
 
 
+# gives the user the ability to input a letter
+# gives error message if letter has already been attempted
+# if not a alphabetic character error merrage is displayed
+
+
 def get_user_guess():
     retry_input_guess = True
     guess_options = [
@@ -41,7 +45,11 @@ def get_user_guess():
                 retry_input_guess = False
         else:
             print('You must enter an alphabetic character.')
+            print('You must enter one alphabetic character.')
     return letter
+
+
+# masks the letters allowing the user to submit there guesses
 
 
 def update_masked_word(current_word, masked_word, current_letter):
@@ -56,6 +64,10 @@ def update_masked_word(current_word, masked_word, current_letter):
 
 def check_if_user_won(current_word, masked_word):
     return masked_word.lower() == current_word.lower()
+
+
+# gives the user an indication if they have guessed successfully
+# if incorrrect guess lives will reduce and letter will show as incorrect
 
 
 def play_word(current_word, masked_word, lives):
@@ -73,6 +85,9 @@ def play_word(current_word, masked_word, lives):
         game_result(user_won_game, current_word)
 
 
+# pulls info from json file to see if word is correct or not
+
+
 def read_words_from_json_file():
     try:
         file = open('./words.json', 'r')
@@ -87,16 +102,23 @@ def read_words_from_json_file():
         raise
 
 
+# allows the user to select what level they would like to play
+
+
 def select_game_level():
     retry_get_level = True
     level_options = ['1', '2', '3']
     while retry_get_level:
         level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- hard ")
+        level = input(f"Select game level: Type 1- Easy, 2- Medium, 3- Hard ")
         if level in level_options:
             retry_get_level = False
         else:
             print('Please enter a valid option (1, 2 or 3)')
     return int(level)
+
+
+# selects what work is taken from the json file
 
 
 def get_random_word(level, words_array):
@@ -112,6 +134,9 @@ def get_random_word(level, words_array):
     random_index = randrange(array_length)
     random_word = words_array[level_key][random_index]
     return random_word
+
+
+# gives the option to play again
 
 
 def playAgain():
